@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Produto</title>
+		<link rel="stylesheet" href="../css/styleavalia.css">
+		<link rel="icon" href="../img/Midia.jpg">
+
+	</head>
+
+	<body>
+
+    <!--  HEADER  -->
+    <header>
+        
+        <img src="../img/subaco_ou_suvaco_nome.png" class="img_nav" alt="Subaco ou Suvaco">
+
+        <div class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../html/sobre.html">Sobre</a>
+            <a href="../index.html#section_contatos_avalia">Contato</a>
+        </div>
+        <div id="login">
+            <a href="#" class="ativo">Login</a>
+        </div>
+
+    </header>
+
+	<main>
+
+		<section id="bloco_avaliacao">
+
+			<h1>Avalie o Fiscal de Vida Alheia</h1>
+
+			<!-- Conta Google logada -->
+			<div id="conta_google">
+				<img src="../img/perfil.jpg" class="foto_perfil" alt="Foto do usuário">
+				<div class="dados_conta">
+					<p class="nome_conta">Nome do Usuário</p>
+					<p class="email_conta">usuario@gmail.com</p>
+				</div>
+			</div>
+
+			<form action="#" method="post" id="form_avaliacao">
+
+				<!-- Nota -->
+				<div class="campo">
+					<p class="rotulo">Sua nota:</p>
+					<div class="estrelas">
+						<input type="radio" id="nota5" name="nota" value="5" required>
+						<label for="nota5" title="5 estrelas">★</label>
+
+						<input type="radio" id="nota4" name="nota" value="4">
+						<label for="nota4" title="4 estrelas">★</label>
+
+						<input type="radio" id="nota3" name="nota" value="3">
+						<label for="nota3" title="3 estrelas">★</label>
+
+						<input type="radio" id="nota2" name="nota" value="2">
+						<label for="nota2" title="2 estrelas">★</label>
+
+						<input type="radio" id="nota1" name="nota" value="1">
+						<label for="nota1" title="1 estrela">★</label>
+					</div>
+				</div>
+
+				<!-- Comentário -->
+				<div class="campo">
+					<label for="comentario" class="rotulo">Sua avaliação:</label>
+					<textarea id="comentario" name="comentario" rows="5" placeholder="Satisfeito com nosso produto?" required></textarea>
+				</div>
+
+				<button type="submit">Enviar avaliação</button>
+
+			</form>
+
+		</section>
+
+	</main>
+
+	</div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>&copy; 2026 Subaco ou Suvaco. Todos os direitos reservados.</p>
+    </footer>
+	
+	<!-- Início do código VLibras -->
+  	<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+    </div>
+	</div>
+  	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  	<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  	</script>
+  	<!-- Fim do código VLibras -->
+</body>
+
+</html>

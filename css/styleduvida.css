@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #D92E9D;
+}
+
+/* HEADER */
+
+header{
+    background-color: #4CE14C;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 50px;
+    padding: 0 30px;
+}
+
+.img_nav{
+    height: 40px;
+    width: auto;
+    margin: -15px 0;
+    justify-self: start;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+    font-size: larger;
+}
+
+.nav a,
+#login a{
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+#login{
+    justify-self: end;
+    font-size: larger;
+}
+
+/* MAIN */
+
+main{
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 40px 15px;
+}
+
+/* DÚVIDA */
+
+#bloco_duvida{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 520px;
+    padding: 30px;
+    background: MediumSeaGreen;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(15, 61, 54, 0.4);
+}
+
+#bloco_duvida h1{
+    text-align: center;
+    color: #0F3D36;
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+    border-bottom: 4px solid white;
+}
+
+#conta_google{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 16px;
+    background: rgba(15, 61, 54, 0.4);
+    border-left: 6px solid #17462b;
+    border-radius: 12px;
+}
+
+.foto_perfil{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #1B5E4F;
+}
+
+.dados_conta{
+    display: flex;
+    flex-direction: column;
+}
+
+.nome_conta{
+    font-weight: bold;
+    color: #E7E7E7;
+}
+
+.email_conta{
+    font-size: 0.9rem;
+    color: #B6B6B6;
+}
+
+#form_duvida{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rotulo{
+    font-weight: bold;
+    color: #1B5E4F;
+}
+
+input[type="text"],
+textarea{
+    width: 100%;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #1f3b33;
+    background: white;
+    border: 2px solid #B7E4C7;
+    border-radius: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder{
+    color: #7aa392;
+}
+
+textarea{
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus{
+    outline: none;
+    border-color: #2E8B57;
+    box-shadow: 0 0 8px rgba(46, 139, 87, 0.4);
+}
+
+button{
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #E9F7EF;
+    background: linear-gradient(135deg, #1B5E4F, #2E8B57);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(15, 61, 54, 0.4);
+}
+
+/* FOOTER */
+
+footer{
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #4CE14C;
+}
+
+@media (max-width: 992px){
+
+    header{
+        padding: 0 20px;
+    }
+
+    .nav,
+    #login{
+        font-size: 18px;
+    }
+
+    main{
+        padding: 30px 20px;
+    }
+
+    #bloco_duvida{
+        max-width: 650px;
+        padding: 35px;
+        gap: 24px;
+    }
+
+    #bloco_duvida h1{
+        font-size: 1.8rem;
+    }
+
+    input[type="text"],
+    textarea{
+        font-size: 1.1rem;
+    }
+
+    button{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 575px){
+
+    header{
+        padding: 0 10px;
+    }
+
+    .img_nav{
+        height: 30px;
+        margin: -10px 0;
+    }
+
+    .nav{
+        gap: 2px;
+        font-size: 14px;
+    }
+
+    .nav a,
+    #login a{
+        padding: 6px 8px;
+    }
+
+    #login{
+        font-size: 14px;
+    }
+
+    main{
+        padding: 25px 12px;
+    }
+
+    #bloco_duvida{
+        padding: 20px;
+    }
+
+    #bloco_duvida h1{
+        font-size: 1.3rem;
+    }
+
+    footer{
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Premium</title>
+    <link rel="stylesheet" href="../css/stylepremium.css">
+    <link rel="icon" href="../img/Midia.jpg">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <img src="../img/subaco_ou_suvaco_nome.png" class="img_nav" alt="Subaco ou Suvaco">
+
+        <div class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../html/sobre.html">Sobre</a>
+            <a href="../index.html#section_contatos_avalia">Contato</a>
+        </div>
+        <div id="login">
+            <a href="../html/login.html">Login</a>
+        </div>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <section class="titulo_pagina" id="titulo_pagina">
+            <h1 class="titulo_principal">Comprar Fiscal Premium</h1>
+            <p class="titulo_subtexto">Preencha seus dados para finalizar a compra.</p>
+        </section>
+
+        <div class="compra" id="compra">
+
+            <!-- CARD 1 -->
+            <aside class="card card_resumo" id="card_1">
+                <h2 class="card_titulo">Resumo do pedido</h2>
+
+                <div class="resumo_linha">
+                    <span>Plano</span>
+                    <strong>Fiscal Premium</strong>
+                </div>
+
+                <ul class="card_lista">
+                    <li>Mensagens ilimitadas</li>
+                    <li>Histórico completo de interações</li>
+                    <li>Funcionalidade de favoritos</li>
+                    <li>Experiência sem restrições diárias</li>
+                </ul>
+
+                <div class="resumo_linha resumo_total">
+                    <span>Total</span>
+                    <strong>R$ 9,90 / mês</strong>
+                </div>
+            </aside>
+
+            <form class="formulario" action="#" method="post">
+
+                <!-- CARD 2 -->
+                <section class="card card_dados">
+                    <h2 class="card_titulo">Dados pessoais</h2>
+
+                    <label for="compra_nome">Nome completo:</label>
+                    <input type="text" id="compra_nome" name="nome" placeholder="Seu nome completo" autocomplete="name" required>
+
+                    <label for="compra_email">Email:</label>
+                    <input type="email" id="compra_email" name="email" placeholder="usuario@gmail.com" autocomplete="email" required>
+
+                    <div class="linha_dupla">
+                        <div class="campo">
+                            <label for="compra_cpf">CPF:</label>
+                            <input type="text" id="compra_cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required>
+                        </div>
+                        <div class="campo">
+                            <label for="compra_telefone">Telefone:</label>
+                            <input type="tel" id="compra_telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel" required>
+                        </div>
+                    </div>
+
+                    <label for="compra_nascimento">Data de nascimento:</label>
+                    <input type="date" id="compra_nascimento" name="nascimento" autocomplete="bday" required>
+                </section>
+
+                <!-- CARD 3 -->
+                <section class="card card_pagamento">
+                    <h2 class="card_titulo" id="titulo_pagamento">Forma de pagamento</h2>
+
+                    <div class="opcoes_pagamento" id="opcoes_pagamento">
+                        <label class="opcao">
+                            <input type="radio" name="pagamento" value="pix" checked>
+                            <span>Pix</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="pagamento" value="cartao">
+                            <span>Cartão de crédito</span>
+                        </label>
+                        <label class="opcao">
+                            <input type="radio" name="pagamento" value="boleto">
+                            <span>Boleto</span>
+                        </label>
+                    </div>
+
+                    <p class="card_aviso">
+                        Não pedimos dados bancários sensíveis nem senhas neste formulário.
+                    </p>
+
+                    <label class="termos">
+                        <input type="checkbox" id="compra_termos" name="termos" required>
+                        <span>Li e aceito os termos de uso e a política de privacidade (LGPD).</span>
+                    </label>
+
+                    <button type="submit" class="botao botao_comprar">Finalizar compra</button>
+                </section>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Subaco ou Suvaco. Todos os direitos reservados.</p>
+    </footer>
+
+	<!-- Início do código VLibras -->
+  	<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+    </div>
+	</div>
+  	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  	<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  	</script>
+  	<!-- Fim do código VLibras -->
+</body>
+</html>

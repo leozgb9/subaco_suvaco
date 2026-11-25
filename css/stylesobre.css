@@ -1,0 +1,620 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    color:  #D92E9D ;
+    text-decoration: none;
+}
+
+header{
+    background-color: #4CE14C;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 50px;
+    padding: 0 30px;
+}
+
+.img_nav{
+    height: 40px; 
+    width: auto;  
+    margin: -15px 0;   
+    justify-self: start;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+    font-size: larger;
+}
+
+.nav a{
+    padding: 8px 14px;
+    border-radius: 6px;
+}
+
+#sobre{
+    background-color: #1EB31E;
+}
+
+#login{
+    justify-self: end;
+    font-size: larger;
+}
+
+.pms{
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    color: #1f3b33;
+}
+
+#bloco_publico-missao-valores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+#bloco_publico-missao-valores h1{
+    color: #0F3D36;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #52B788;
+}
+
+#bloco_publico-missao-valores > .pms{
+    background: #B7E4C7;
+    border-left: 6px solid #2E8B57;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#blocos_topicos{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#bloco_publico,
+#bloco_missao,
+#bloco_valores{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px 25px;
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #1B5E4F, #2E8B57);
+    box-shadow: 0 6px 16px rgba(15, 61, 54, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bloco_publico:hover,
+#bloco_missao:hover,
+#bloco_valores:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 61, 54, 0.45);
+}
+
+#bloco_publico h2,
+#bloco_missao h2,
+#bloco_valores h2{
+    order: 1;
+    flex: 1 1 100%;
+    text-align: left;
+    color: #E9F7EF;
+    font-size: 1.6rem;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #B7E4C7;
+}
+
+#bloco_publico::before,
+#bloco_missao::before,
+#bloco_valores::before{
+    content: "";
+    order: 2;
+    flex: 0 0 280px;
+    height: 200px;
+    border-radius: 12px;
+    border: 3px solid #B7E4C7;
+    background-color: #52B788;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease;
+}
+
+#bloco_publico .pms,
+#bloco_missao .pms,
+#bloco_valores .pms{
+    order: 3;
+    flex: 1 1 280px;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    background: #E9F7EF;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+#bloco_publico::before{
+    background-image: url(../img/publicoalvo.jpg);
+}
+
+#bloco_missao::before{
+    background-image: url(../img/mssao.jpg);
+}
+
+#bloco_valores::before{
+    background-image: url(../img/valores.jpg);
+}
+
+#bloco_missao .pms{
+    order: 2;
+}
+
+#bloco_missao::before{
+    order: 3;
+}
+
+#bloco-produto{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 1350px;
+    margin: 3vw auto;
+    padding: 30px;
+}
+
+#bloco-produto h1{
+    color: #0F3D36;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #52B788;
+}
+
+#bloco-produto h2{
+    color: #E9F7EF;
+    font-size: 1.5rem;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1B5E4F, #2E8B57);
+}
+
+#bloco-produto p{
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 1.05rem;
+    background: #B7E4C7;
+    border-left: 6px solid #2E8B57;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#bloco-produto p:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(15, 61, 54, 0.3);
+}
+
+#bloco-produto h1:nth-of-type(2){
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: left;
+    padding: 0;
+    border-bottom: none;
+    color: #1f3b33;
+}
+
+#tabela_areas{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #E9F7EF;
+    box-shadow: 0 6px 16px rgba(15, 61, 54, 0.25);
+}
+
+.linha_tabela{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 22px;
+    border-bottom: 1px solid #B7E4C7;
+    transition: background 0.3s ease;
+}
+
+.linha_tabela:last-child{
+    border-bottom: none;
+}
+
+.linha_tabela:hover{
+    background: #B7E4C7;
+}
+
+.cabecalho_tabela{
+    background: #0F3D36;
+    color: #E9F7EF;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cabecalho_tabela:hover{
+    background: #0F3D36;
+}
+
+.coluna_area{
+    flex: 0 0 30%;
+    font-weight: bold;
+    color: #1B5E4F;
+}
+
+.cabecalho_tabela .coluna_area{
+    color: #E9F7EF;
+}
+
+.coluna_info{
+    flex: 1;
+    line-height: 1.5;
+}
+
+#bloco_jornada{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 22px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1B5E4F, #2E8B57);
+    box-shadow: 0 6px 16px rgba(15, 61, 54, 0.3);
+}
+
+#bloco_jornada h3{
+    color: #E9F7EF;
+    font-size: 1.3rem;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #B7E4C7;
+}
+
+.lista_jornada{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.lista_jornada li{
+    padding: 12px 16px;
+    line-height: 1.5;
+    color: #1f3b33;
+    background: #E9F7EF;
+    border-left: 5px solid #52B788;
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.lista_jornada li:hover{
+    transform: translateX(8px);
+    border-color: #0F3D36;
+}
+
+#bloco-equipe{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 1330px;
+    margin: 3vw auto;
+    padding: 20px;
+}
+
+#bloco-equipe h1{
+    flex: 1 1 100%;
+    text-align: center;
+    color: #0F3D36;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #52B788;
+}
+
+.card_equipe{
+    display: flex;
+    align-items: stretch;
+    gap: 15px;
+    flex: 1 1 calc(50% - 15px);
+    min-width: 300px;
+    padding: 15px;
+    background: linear-gradient(135deg, #1B5E4F, #2E8B57);
+    border: 3px solid #B7E4C7;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(15, 61, 54, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card_equipe:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(15, 61, 54, 0.45);
+}
+
+.card_equipe:last-of-type:nth-of-type(odd){
+    flex-basis: 100%;
+}
+
+.tex_card{
+    flex: 1;
+    min-height: 200px;
+    align-content: center;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #1f3b33;
+    background: #E9F7EF;
+    padding: 14px;
+    border-radius: 10px;
+}
+
+.foto{
+    flex: 0 0 150px;
+    align-self: center;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #B7E4C7;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+}
+
+.card_equipe:hover .foto{
+    transform: scale(1.06);
+}
+
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    background-color: #4CE14C;
+}
+
+@media (max-width: 900px){
+
+    #bloco_publico::before,
+    #bloco_missao::before,
+    #bloco_valores::before{
+        flex: 0 0 200px;
+        height: 170px;
+    }
+
+    #bloco_publico .pms,
+    #bloco_missao .pms,
+    #bloco_valores .pms{
+        font-size: 1.05rem;
+        text-align: left;
+    }
+
+    #bloco-produto p{
+        text-align: left;
+    }
+
+    .card_equipe{
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    .tex_card{
+        min-height: 170px;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .foto{
+        flex: 0 0 140px;
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 992px){
+
+    header{
+        padding: 0 20px;
+    }
+
+    .nav{
+        font-size: 18px;
+    }
+
+    #login{
+        font-size: 18px;
+    }
+
+    #bloco_publico-missao-valores{
+        padding: 25px 20px;
+    }
+
+    #bloco_publico-missao-valores h1{
+        font-size: 1.7rem;
+    }
+
+    #bloco_publico::before,
+    #bloco_missao::before,
+    #bloco_valores::before{
+        flex: 0 0 220px;
+        height: 180px;
+    }
+
+    #bloco_publico .pms,
+    #bloco_missao .pms,
+    #bloco_valores .pms{
+        font-size: 1.15rem;
+        flex: 1 1 240px;
+    }
+
+    #bloco-produto{
+        padding: 25px 20px;
+    }
+
+    #bloco-produto h2{
+        font-size: 1.3rem;
+    }
+
+    .coluna_area{
+        flex: 0 0 35%;
+    }
+
+    #bloco-equipe{
+        padding: 20px;
+    }
+
+    #bloco-equipe h1{
+        font-size: 1.7rem;
+    }
+
+    .card_equipe{
+        min-width: 260px;
+    }
+
+    .foto{
+        flex: 0 0 120px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .tex_card{
+        min-height: 230px;
+        font-size: 0.95rem;
+    }
+
+    footer{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 575px){
+
+    header{
+        padding: 0 10px;
+    }
+
+    .img_nav{
+        height: 30px;
+        margin: -10px 0;
+    }
+
+    .nav{
+        gap: 2px;
+        font-size: 14px;
+    }
+
+    .nav a{
+        padding: 6px 8px;
+    }
+
+    #login{
+        font-size: 14px;
+    }
+
+    #bloco_publico-missao-valores{
+        padding: 15px;
+    }
+
+    #bloco_publico-missao-valores h1{
+        font-size: 1.4rem;
+    }
+
+    #bloco_publico::before,
+    #bloco_missao::before,
+    #bloco_valores::before{
+        flex: 1 1 100%;
+        height: 170px;
+    }
+
+    #bloco_publico .pms,
+    #bloco_missao .pms,
+    #bloco_valores .pms{
+        font-size: 1.05rem;
+    }
+
+    #bloco_missao .pms{
+        order: 3;
+    }
+
+    #bloco_missao::before{
+        order: 2;
+    }
+
+    #bloco-produto{
+        padding: 15px;
+    }
+
+    #bloco-produto h1{
+        font-size: 1.4rem;
+    }
+
+    #bloco-produto h2{
+        font-size: 1.2rem;
+    }
+
+    .linha_tabela{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .coluna_area{
+        flex: none;
+    }
+
+    #bloco-equipe{
+        padding: 12px;
+    }
+
+    #bloco-equipe h1{
+        font-size: 1.4rem;
+    }
+
+    .card_equipe{
+        flex-direction: column-reverse;
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    .foto{
+        flex: none;
+        width: 100%;
+        height: 180px;
+    }
+
+    .tex_card{
+        min-height: 0;
+        font-size: 1rem;
+    }
+
+    footer{
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+}

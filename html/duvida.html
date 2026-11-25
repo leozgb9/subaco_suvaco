@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Enviar dúvida</title>
+		<link rel="stylesheet" href="../css/styleduvida.css">
+		<link rel="icon" href="../img/Midia.jpg">
+
+	</head>
+
+	<body>
+
+		<!-- HEADER -->
+		<header>
+
+			<img src="../img/subaco_ou_suvaco_nome.png" class="img_nav" alt="Subaco ou Suvaco">
+
+			<div class="nav">
+				<a href="../index.html">Home</a>
+				<a href="../html/sobre.html">Sobre</a>
+				<a href="../index.html#section_contatos_avalia">Contato</a>
+			</div>
+
+			<div id="login">
+				<a href="../html/login.html">Login</a>
+			</div>
+
+		</header>
+
+		<main>
+
+			<section id="bloco_duvida">
+
+				<h1>Tem alguma dúvida?</h1>
+
+				<!-- Conta Google logada -->
+				<div id="conta_google">
+					<img src="../img/perfil.jpg" class="foto_perfil" alt="Foto do usuário">
+					<div class="dados_conta">
+						<p class="nome_conta">Nome do Usuário</p>
+						<p class="email_conta">usuario@gmail.com</p>
+					</div>
+				</div>
+
+				<form action="#" method="post" id="form_duvida">
+
+					<!-- Assunto -->
+					<div class="campo">
+						<label for="assunto" class="rotulo">Assunto:</label>
+						<input type="text" id="assunto" name="assunto" maxlength="80" placeholder="Ex: Não consigo salvar meus dados" required>
+					</div>
+
+					<!-- Mensagem -->
+					<div class="campo">
+						<label for="mensagem" class="rotulo">Sua dúvida:</label>
+						<textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui a sua dúvida..." required></textarea>
+					</div>
+
+					<button type="submit">Enviar dúvida</button>
+
+				</form>
+
+			</section>
+
+		</main>
+
+		<!-- FOOTER -->
+		<footer>
+			<p>&copy; 2026 Subaco ou Suvaco. Todos os direitos reservados.</p>
+		</footer>
+
+	<!-- Início do código VLibras -->
+  	<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+    </div>
+	</div>
+  	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  	<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  	</script>
+  	<!-- Fim do código VLibras -->
+</body>
+
+</html>

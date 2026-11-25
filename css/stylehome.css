@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #E6F0EA;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ------------------------ HEADER ------------------------ */
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+a:hover{
+    color:  #D92E9D ;
+    text-decoration: none;
+}
+
+header{
+    background-color: #4CE14C;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    height: 50px;                        
+    padding: 0 30px;
+}
+
+.img_nav{
+    height: 40px;    
+    width: auto;         
+    margin: -15px 0;    
+    justify-self: start;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+    font-size: larger;
+}
+
+.nav a{
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+#home{
+    background-color: #1EB31E;
+}
+
+
+#login{
+    justify-self: end;
+    font-size: larger;
+}
+
+/* ------------------------ MAIN ------------------------ */
+
+/* ------------------------ CARD 1 ------------------------ */
+
+.download{
+    margin: 25vh;
+    text-align: center;
+}
+
+.centro{
+    font-size: 80px;
+}
+
+.link{
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+}
+
+.centro_down{
+    border-radius: 10px;
+    padding: 8px;
+    background-color: #D92E9D;
+    font-size: 60px;
+    transition-property: transform;
+    transition-duration: 0.3s; 
+    transition-timing-function: ease-in-out; 
+    transition-delay: 0s; 
+}
+
+.centro_down:hover{
+    color: white;
+    text-decoration: none;
+    transform: scale(120%);
+}
+
+/* ------------------------ CARD 2 ------------------------ */
+
+.topicos3{
+    display: flex;
+    gap: 30px;
+    padding: 60px 5vw;
+    background-color: #0F3D36;
+}
+
+.caixa{
+    flex: 1;
+    display: flex;
+    border-radius: 20px;
+    text-align: center;
+    background-color: MediumSeaGreen;
+    padding: 40px 30px;
+    color: #FFFFFF;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.caixa:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+.conteudo{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 100%;
+}
+
+.titulo{
+    font-size: clamp(28px, 3vw, 40px);
+    margin-bottom: 20px;
+}
+
+.texto{
+    font-size: clamp(18px, 1.8vw, 24px);
+    line-height: 1.5;
+}
+
+.ver{
+    justify-self: center;
+    font-size: clamp(18px, 1.8vw, 24px);
+    margin-top: 30px;
+    padding: 10px 28px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.ver:hover{
+    background-color: #D92E9D;
+    border-color: #D92E9D;
+    color: white;
+}
+
+/* ------------------------ CARD 3 ------------------------ */
+
+#section_contatos_avalia{
+    padding: 60px 5vw;
+    background-color: #FFFFFF;
+}
+
+.contato_topo{
+    margin-bottom: 40px;
+}
+
+.contato_topo h1{
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    color: #000000;
+}
+
+.contato_topo h1 span{
+    font-weight: 700;
+    color: #000000;
+}
+
+.contato_topo p{
+    font-size: 18px;
+    color: #000000;
+    margin-top: 12px;
+}
+
+#flex_contatos_avalia{
+    display: flex;
+    gap: 30px;
+}
+
+.bloco{
+    flex: 1;
+    min-height: 250px;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bloco h2{
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.bloco p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bloco_contatos{
+    background-color: #C5FCC5;
+}
+
+.geral_contatos{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.logos{
+    width: 32px;
+}
+
+.bloco_avalia{
+    background-color: MediumSeaGreen;
+    color: #FFFFFF;
+}
+
+.grupo_botoes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.botoes{
+    padding: 12px 28px;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.botoes:hover{
+    background-color: #D7F75B;
+    color: #D92E9D;
+}
+
+/* ------------------------ FOOTER ------------------------ */
+
+footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #4CE14C;
+}
+
+@media (max-width: 575px){
+
+    /* HEADER */
+    header{
+        padding: 0 10px;
+    }
+
+    .img_nav{
+        height: 30px;
+        margin: -10px 0;
+    }
+
+    .nav{
+        gap: 2px;
+        font-size: 14px;
+    }
+
+    .nav a{
+        padding: 6px 8px;
+    }
+
+    #login{
+        font-size: 14px;
+    }
+
+    /* CARD 1 */
+    .download{
+        margin: 15vh 20px;
+    }
+
+    .centro{
+        font-size: 36px;
+    }
+
+    .centro_down{
+        font-size: 28px;
+    }
+
+    /* CARD 2 */
+    .topicos3{
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .caixa{
+        padding: 30px 20px;
+    }
+
+    .titulo{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    .texto{
+        font-size: 18px;
+    }
+
+    .ver{
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 8px 22px;
+    }
+
+    /* CARD 3 */
+    #section_contatos_avalia{
+        padding: 40px 20px;
+    }
+
+    .contato_topo{
+        margin-bottom: 25px;
+    }
+
+    .contato_topo h1{
+        font-size: 32px;
+    }
+
+    .contato_topo p{
+        font-size: 16px;
+    }
+
+    #flex_contatos_avalia{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bloco{
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .bloco h2{
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .geral_contatos{
+        gap: 12px;
+    }
+
+    .geral_contatos p{
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .logos{
+        width: 28px;
+    }
+
+    .grupo_botoes{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .botoes{
+        text-align: center;
+    }
+
+    /* FOOTER */
+    footer{
+        padding: 20px 15px;
+        font-size: 14px;
+    }
+}
+
+
